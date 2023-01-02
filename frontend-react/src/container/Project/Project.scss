@@ -79,6 +79,10 @@
       width: 100%;
       margin: 1rem;
     }
+
+    @media screen and (min-width: 862px) {
+      height: 90%;
+    }
   }
 }
 
@@ -157,6 +161,14 @@
   position: relative;
   flex-direction: column;
 
+  .app__project-content-description {
+    transform:  translateY(-10px);
+
+    @media screen and (min-width: 2000px) {
+      transform:  translateY(10px);
+    }
+  }
+
   h4 {
     margin-top: 1rem;
     line-height: 1.5;
@@ -168,5 +180,9 @@
     border-radius: 10px;
     background-color: white;
     top: -25px;
+  }
+
+  @media screen and (min-width: 862px) {
+    height: 100%;
   }
 }

@@ -139,6 +139,13 @@
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 1024px) {
+  .timeline-item-content {
+    max-width: 90%;
+    width: 800px;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .timeline-item-content {
     max-width: 100%;
@@ -146,7 +153,7 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1023px) {
   .timeline-item-content,
   .timeline-item:nth-child(odd) .timeline-item-content {
     padding: 15px 10px;

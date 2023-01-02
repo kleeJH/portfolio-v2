@@ -12,7 +12,7 @@ const Project = () => {
   const [projects, setProjects] = useState([]);
   const [filterProject, setFilterProject] = useState([]);
 
-  const projectSelection = ["All", "Mobile App", "Web App"];
+  const projectSelection = ["All", "School Projects", "Mobile App", "Web App"];
 
   useEffect(() => {
     const query = '*[_type == "projects"]';
@@ -121,10 +121,12 @@ const Project = () => {
                 }
               </div>
               <div className="app__project-content app__flex">
-                <h4 className="bold-text">{project.title}</h4>
-                <p className="p-text" style={{ marginTop: 10 }}>
-                  {project.description}
-                </p>
+                <div className="app__project-content-description">
+                  <h4 className="bold-text">{project.title}</h4>
+                  <p className="p-text" style={{ marginTop: 10 }}>
+                    {project.description}
+                  </p>
+                </div>
                 <div className="app__project-tag app__flex">
                   <p className="p-text">{project.tags[0]}</p>
                 </div>

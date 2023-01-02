@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 import "./Timeline.scss";
 
 const TimelineItem = ({ data, index }) => {
-  const [width, setWidth] = useState(window.innerWidth);
+  // const [width, setWidth] = useState(window.innerWidth);
   const [hover, setHover] = useState(false);
 
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
+  // function handleWindowSizeChange() {
+  //   setWidth(window.innerWidth);
+  // }
 
   function hexToRgbA(hex) {
     var c;
@@ -30,22 +30,18 @@ const TimelineItem = ({ data, index }) => {
     throw new Error("Bad Hex");
   }
 
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleWindowSizeChange);
+  //   return () => {
+  //     window.removeEventListener("resize", handleWindowSizeChange);
+  //   };
+  // }, []);
 
-  const isMobile = width <= 768;
+  // const isMobile = width <= 768;
   return (
     <motion.div
       whileInView={
-        isMobile
-          ? { scale: [1, 1.1, 1], opacity: [0, 1] }
-          : index % 2 === 0
-          ? { x: [100, 0], opacity: [0, 1] }
-          : { x: [-100, 0], opacity: [0, 1] }
+        {scale: [1, 1.1, 1], opacity: [0, 1], x: [0, 0]}
       }
       transition={{ duration: 0.6, type: "spring", delay: index * 0.2 }}
       className="timeline-item"
@@ -94,3 +90,5 @@ const Timeline = ({ timelineData }) =>
   );
 
 export default Timeline;
+
+// index % 2 === 0 ? { x: [100, 0], opacity: [0, 1] } : { x: [-100, 0], opacity: [0, 1] }
