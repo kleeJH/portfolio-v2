@@ -10,7 +10,8 @@ import logo from "../assets/logo.png";
 import discord from "../assets/discord.png";
 import linkedin from "../assets/linkedin.png";
 
-import lune from "../assets/lune_transparent_bg_full.png";
+import lune from "../assets/lune_transparent_bg.png";
+import cat from "../assets/cat.png";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -24,4 +25,5 @@ export default {
   discord,
   linkedin,
   lune,
+  cat
 };

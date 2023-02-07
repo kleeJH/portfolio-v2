@@ -146,6 +146,22 @@
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .timeline-item-content {
+    max-width: 90%;
+    width: 1200px;
+    font-size: 1.5rem;
+
+    p, .tag {
+      font-size: 1.2rem;
+    }
+
+    time {
+      font-size: 1.5rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .timeline-item-content {
     max-width: 100%;
