@@ -115,18 +115,6 @@ const Footer = () => {
           <img src={images.discord} alt="discord" />
           <div className="bold-text">Kevin#0574</div>
         </div>
-
-        <a
-          href="https://www.linkedin.com/in/kleejunhong/"
-          className="bold-text app__footer-a-card"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="app__footer-card">
-            <img src={images.linkedin} alt="linkedin" />
-            kleejunhong
-          </div>
-        </a>
       </div>
 
       {!isFormSubmitted ? (

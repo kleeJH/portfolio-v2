@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Snackbar, Alert } from "@mui/material";
-import { BsLinkedin, BsDiscord } from "react-icons/bs";
+import { BsDiscord } from "react-icons/bs";
 import Slide from "@mui/material/Slide";
 
 function SlideTransition(props) {
@@ -33,16 +33,6 @@ const SocialMedia = () => {
         >
           <BsDiscord />
         </div>
-        <a
-          href="https://www.linkedin.com/in/kleejunhong/"
-          className="bold-text app__footer-a-card"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div>
-            <BsLinkedin />
-          </div>
-        </a>
       </div>
       <Snackbar
         open={openSnackbar}
