@@ -1,6 +1,6 @@
 // REFERENCE: https://www.florin-pop.com/blog/2019/04/how-to-create-a-timeline-with-react/
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import "./Timeline.scss";
