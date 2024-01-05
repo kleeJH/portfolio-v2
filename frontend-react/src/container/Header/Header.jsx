@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Alert } from "@mui/material";
 
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
@@ -18,57 +19,62 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div className="app__header app__flex no-select">
-      <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
-        className="app__header-info"
-      >
-        <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
-            <span>👋</span>
-            <div style={{ marginLeft: 20 }}>
-              <p className="p-text"> Hello, I am</p>
-              <h1 className="head-text">Jun Hong</h1>
+    <>
+      <Alert severity="warning" style={{marginTop:"10%"}}>This project has not been updated since 6/9/2023!</Alert>
+      <div className="app__header app__flex no-select">
+        <motion.div
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          className="app__header-info"
+        >
+          <div className="app__header-badge">
+            <div className="badge-cmp app__flex">
+              <span>👋</span>
+              <div style={{ marginLeft: 20 }}>
+                <p className="p-text"> Hello, I am</p>
+                <h1 className="head-text">Jun Hong</h1>
+              </div>
+            </div>
+            <div className="tag-cmp app__flex">
+              <p className="p-text" style={{ margin: "0" }}>
+                Student
+              </p>
             </div>
           </div>
-          <div className="tag-cmp app__flex">
-            <p className="p-text" style={{ margin: "0" }}>
-              Student
-            </p>
-          </div>
-        </div>
-      </motion.div>
+        </motion.div>
 
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img"
-      >
-        <img src={images.lune} alt="profile_bg" />
-        <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          src={images.circle}
-          alt="profile_circle"
-          className="overlay_circle"
-        />
-      </motion.div>
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          className="app__header-img"
+        >
+          <img src={images.lune} alt="profile_bg" />
+          <motion.img
+            whileInView={{ scale: [0, 1] }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            src={images.circle}
+            alt="profile_circle"
+            className="overlay_circle"
+          />
+        </motion.div>
 
-      <motion.div
-        variant={scaleVariants}
-        whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
-      >
-        {[images.timeManagement, images.problemSolving, images.teamPlayer].map(
-          (circle, index) => (
+        <motion.div
+          variant={scaleVariants}
+          whileInView={scaleVariants.whileInView}
+          className="app__header-circles"
+        >
+          {[
+            images.timeManagement,
+            images.problemSolving,
+            images.teamPlayer,
+          ].map((circle, index) => (
             <div className="circle-cmp app__flex" key={`circle-${index}`}>
               <img src={circle} alt="circle" />
             </div>
-          )
-        )}
-      </motion.div>
-    </div>
+          ))}
+        </motion.div>
+      </div>
+    </>
   );
 };
 

@@ -113,7 +113,7 @@ const Footer = () => {
           }}
         >
           <img src={images.discord} alt="discord" />
-          <div className="bold-text">Kevin#0574</div>
+          <div className="bold-text">lee.junhong</div>
         </div>
       </div>
 
