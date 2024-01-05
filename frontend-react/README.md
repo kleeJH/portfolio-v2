@@ -73,7 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - `sanity docs` to open the documentation in a browser
 - `sanity manage` to open the project settings in a browser
 - `sanity help` to explore the CLI manual
-- `sanityu start` to run your studio
+- `sanity start` to run your studio
 
 # Code to build front-end react
 - `npm run build` to run and build the optimized production build for the react application
